@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class VectorDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Vector<String> vec = new Vector<>();
+
+        System.out.print("Enter number of elements: ");
+        int n = sc.nextInt();
+        sc.nextLine();
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter element " + (i + 1) + ": ");
+            vec.add(sc.nextLine());
+        }
+
+        System.out.println("Vector: " + vec);
+
+        System.out.print("Enter element to remove: ");
+        String rem = sc.nextLine();
+        vec.remove(rem);
+
+        System.out.println("After removal: " + vec);
+        System.out.println("Size: " + vec.size());
+        System.out.println("Capacity: " + vec.capacity());
+    }
+}

@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class TreeMapDemo {
+    public static void main(String[] args) {
+
+        TreeMap<Integer, String> map = new TreeMap<>();
+
+        map.put(101, "Apple");
+        map.put(105, "Mango");
+        map.put(102, "Orange");
+        map.put(110, "Banana");
+
+        System.out.println("Ascending Order:");
+        for (Map.Entry<Integer, String> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
+
+        System.out.println("\nDescending Order:");
+        NavigableMap<Integer, String> desc = map.descendingMap();
+        for (Map.Entry<Integer, String> entry : desc.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
+    }
+}
