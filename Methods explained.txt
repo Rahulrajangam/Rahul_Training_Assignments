@@ -1,0 +1,65 @@
+Selenium WebDriver – Driver Methods (Browser Commands)
+
+get()
+Used to load a new webpage in the current browser window by passing a URL.
+
+getCurrentURL()
+Returns the URL of the currently opened webpage.
+
+getPageSource()
+Returns the HTML source code of the current webpage.
+
+getTitle()
+Returns the title text of the current page.
+
+close() vs quit()
+close() closes the currently active browser tab/window.
+quit() closes all opened browser windows and ends the driver session.
+
+getWindowHandle()
+Returns the unique window ID of the currently active browser window.
+
+getWindowHandles()
+Returns a set of unique IDs for all opened browser windows.
+
+navigate()
+Supports browser navigation:
+navigate().to(), navigate().back(), navigate().forward(), navigate().refresh()
+
+switchTo()
+Switches WebDriver control to another window, frame, or alert.
+
+Selenium WebDriver – WebElement Methods (Element Commands)
+
+sendKeys()
+Types text into an input field or editable area.
+
+clear()
+Clears existing text inside an input field.
+
+click()
+Performs click action on a button, link, or any clickable element.
+
+findElement()
+Returns the first matching WebElement based on a locator.
+
+findElements()
+Returns a list of all matching WebElements as per locator.
+
+getDomAttribute()
+Returns the live DOM attribute value of the element.
+
+getScreenShotAs()
+Takes a screenshot of a specific element only (not entire page).
+
+getText()
+Extracts visible text inside the element.
+
+isDisplayed()
+Returns true/false depending on element visibility on the page.
+
+isEnabled()
+Returns true/false depending on whether the element is active for use.
+
+isSelected()
+Returns true/false if checkbox/radio/option is selected.
