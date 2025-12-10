@@ -1,0 +1,44 @@
+package Assignment6;
+
+import java.util.Scanner;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
+
+public class CrossBrowserTest {
+  @Test
+  public void CBtest() {
+	  Scanner sc = new Scanner(System.in);
+      WebDriver driver = null;
+
+      System.out.println("Enter Browser Name (chrome / firefox / edge): ");
+      String browser = sc.nextLine();
+
+      if(browser.equalsIgnoreCase("chrome")) {
+          driver = new ChromeDriver();
+      }
+      else if(browser.equalsIgnoreCase("firefox")) {
+          driver = new FirefoxDriver();
+      }
+      else if(browser.equalsIgnoreCase("edge")) {
+          driver = new EdgeDriver();
+      }
+      else {
+          System.out.println("Invalid Browser Name");
+          System.exit(0);
+      }
+
+      driver.manage().window().maximize();
+      
+      driver.get("https://chandru-portfollio.onrender.com/");
+
+      System.out.println("Title = " + driver.getTitle());
+
+      driver.quit();
+      sc.close();
+
+  }
+}
